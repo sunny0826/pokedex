@@ -63,7 +63,7 @@
 本项目默认使用 Bun。在仓库根目录执行：
 
 ```bash
-cd /path/to/pokedex-zh
+cd /path/to/pokedex
 bun -v
 bun install
 ```
@@ -227,7 +227,7 @@ emulator-5554 device product:sdk_gphone64_arm64 model:sdk_gphone64_arm64
 命令：
 
 ```bash
-cd /path/to/pokedex-zh
+cd /path/to/pokedex
 bun run dev
 ```
 
@@ -261,7 +261,7 @@ http://localhost:8080
 完整命令：
 
 ```bash
-cd /path/to/pokedex-zh
+cd /path/to/pokedex
 bun run lint
 bun run build
 bun run cap:sync
@@ -330,7 +330,7 @@ adb shell pm clear com.pokedexzh.app
 先启动 Vite：
 
 ```bash
-cd /path/to/pokedex-zh
+cd /path/to/pokedex
 bun run dev -- --host 0.0.0.0 --port 8080
 ```
 
@@ -387,14 +387,14 @@ adb logcat -d -t 300 | grep -iE "chromium|capacitor|err_cleartext|failed"
 打开工程：
 
 ```bash
-cd /path/to/pokedex-zh
+cd /path/to/pokedex
 bun run cap:open:android
 ```
 
 或手动打开：
 
 ```text
-Android Studio -> Open -> /path/to/pokedex-zh/android
+Android Studio -> Open -> /path/to/pokedex/android
 ```
 
 预期：

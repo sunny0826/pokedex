@@ -1,15 +1,15 @@
 {
-  "name": "pokedex-zh",
+  "name": "pokedex",
   "private": true,
   "version": "0.1.0",
   "description": "Unofficial Pokédex web app with an optional Android client",
   "homepage": "https://pokedex.guoxudong.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sunny0826/pokedex-zh.git"
+    "url": "https://github.com/sunny0826/pokedex.git"
   },
   "bugs": {
-    "url": "https://github.com/sunny0826/pokedex-zh/issues"
+    "url": "https://github.com/sunny0826/pokedex/issues"
   },
   "license": "MIT",
   "author": "Xudong Guo",

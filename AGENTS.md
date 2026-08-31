@@ -25,9 +25,15 @@ Use TypeScript and React function components. Prefer existing project patterns b
 
 No automated test framework or `bun run test` script is currently configured. Before submitting changes, run `bun run lint` and `bun run build`. If you add tests, place them near the code they cover with names such as `Component.test.tsx` or `hook.test.ts`, and document the new test command in `package.json` and this file.
 
+## Documentation Language
+
+`README.md` is English. Keep the Chinese translation in `README.zh-CN.md`.
+
 ## Commit & Pull Request Guidelines
 
-Recent history mostly follows Conventional Commits, for example `feat(i18n): ...`, `style(ui): ...`, and `feat(缓存): ...`. Use a short type and optional scope: `feat(pokedex): add filter control`, `fix(api): handle cache expiry`. PRs should include a clear summary, linked issue when applicable, verification steps, and screenshots or screen recordings for UI changes, especially mobile layout changes.
+Write commit messages and pull request titles/descriptions in **English**. Use Conventional Commits with a short type and optional scope, for example `feat(pokedex): add filter control` or `fix(api): handle cache expiry`. Do not use Chinese in commit subjects or PR titles.
+
+PRs should include a clear English summary, a linked issue when applicable, verification steps, and screenshots or screen recordings for UI changes, especially mobile layout changes.
 
 ## Agent-Specific Instructions
 

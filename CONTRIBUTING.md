@@ -48,7 +48,7 @@ Web 运行时走 PokeAPI，不使用本地 SQLite。Android 原生壳仍使用�
 
 ## 提交与 PR
 
-使用 Conventional Commits，可带范围：
+Commit 信息和 Pull Request 必须使用英文。使用 Conventional Commits，可带范围：
 
 ```text
 feat(pokedex): add filter control
@@ -56,9 +56,11 @@ fix(api): handle cache expiry
 docs(readme): add English getting-started section
 ```
 
+不要在 commit subject 或 PR 标题里使用中文。
+
 PR 请包含：
 
-- 改动摘要
+- 英文改动摘要
 - 关联 issue（如有）
 - 验证步骤：`bun run lint`、`bun run build`，涉及 UI 时说明桌面和窄屏表现
 - UI 改动附截图或录屏，尤其是移动布局

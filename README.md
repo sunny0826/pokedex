@@ -1,33 +1,33 @@
-# 宝可梦图鉴
+# Pokédex ZH
 
-[English](./README.en.md)
+[中文](./README.zh-CN.md)
 
-非官方掌上宝可梦图鉴。浏览器里像一台图鉴设备：浏览、筛选、收藏、查看详情，也可以组队和模拟对战。
+An unofficial handheld Pokédex. The UI behaves like a device: browse, filter, collect, and inspect Pokémon, then build teams or run battle simulations.
 
-**在线演示：** [https://pokedex.guoxudong.io/](https://pokedex.guoxudong.io/)
+**Live demo:** [https://pokedex.guoxudong.io/](https://pokedex.guoxudong.io/)
 
-> 本项目与 Nintendo、GAME FREAK、The Pokémon Company 无关，未获官方授权。详见 [NOTICE](./NOTICE)。
+> This project is not affiliated with Nintendo, GAME FREAK, or The Pokémon Company, and is not officially licensed. See [NOTICE](./NOTICE).
 
-## 功能
+## Features
 
-- 全国图鉴列表、中英文搜索、属性 / 世代 / 特殊形态筛选
-- 详情：能力值、特性、进化、形态、招式与图鉴文本
-- 收藏分组、队伍构建、属性相克与对战模拟
-- **Web：** 直接请求 [PokeAPI](https://pokeapi.co/)
-- **Android（可选）：** Capacitor 壳 + 本地 SQLite 离线图鉴库
+- National Dex list, Chinese/English search, type / generation / special-form filters
+- Details: stats, abilities, evolution, forms, moves, and Pokédex text
+- Favorite groups, team builder, type chart, and battle simulation
+- **Web:** talks to [PokeAPI](https://pokeapi.co/) directly
+- **Android (optional):** Capacitor shell plus a local SQLite Pokédex database
 
-## 快速开始（Web）
+## Quick start (Web)
 
-本项目默认使用 [Bun](https://bun.sh/)。需要 Bun 1.3+。
+This repo defaults to [Bun](https://bun.sh/). Bun 1.3+ is required.
 
 ```sh
-git clone https://github.com/sunny0826/pokedex-zh.git
-cd pokedex-zh
+git clone https://github.com/sunny0826/pokedex.git
+cd pokedex
 bun install
 bun run dev
 ```
 
-开发服务器默认 `http://localhost:8080`。
+The dev server listens on `http://localhost:8080`.
 
 ```sh
 bun run lint
@@ -35,16 +35,16 @@ bun run build
 bun run preview
 ```
 
-## 技术栈
+## Stack
 
 - Vite 7 + React 18 + TypeScript
 - Tailwind CSS + shadcn/Radix
 - TanStack Query
-- Capacitor Android + SQLite（仅原生应用）
+- Capacitor Android + SQLite (native app only)
 
-## Android（可选）
+## Android (optional)
 
-Android 不是运行 Web 版的前提。真机或模拟器构建：
+Android is not required to run the web app. To build for a device or emulator:
 
 ```sh
 bun install
@@ -55,23 +55,23 @@ bun run cap:sync
 bun run android:debug:apk
 ```
 
-Debug APK：
+Debug APK:
 
 ```text
 android/app/build/outputs/apk/debug/app-debug.apk
 ```
 
-更完整的说明：
+More detail:
 
-- [本地模拟与调试](docs/android-local-simulation-debugging.md)
-- [测试机安装](docs/android-test-device-deploy.md)
-- [发布准备与隐私注意](docs/android-release-readiness.md)
+- [Local simulation and debugging](docs/android-local-simulation-debugging.md)
+- [Install on a test device](docs/android-test-device-deploy.md)
+- [Release readiness and privacy notes](docs/android-release-readiness.md)
 
-在完成商标与版权评估前，**不建议**把本应用上架 Google Play 或国内应用商店。
+Until a trademark and copyright review is done, **do not** ship this app to Google Play or other stores.
 
-## 图鉴数据包（Android）
+## Pokédex data packages (Android)
 
-离线库只给 Android 用。生成：
+The offline database is Android-only. Generate it with:
 
 ```sh
 bun run data:build:pokedex-db -- \
@@ -79,27 +79,27 @@ bun run data:build:pokedex-db -- \
   --remote-base-url https://cdn.example.com/pokedex
 ```
 
-产物写在已忽略的 `public/assets/databases/`。把 manifest 和版本化 `.zip` 放到静态托管后，设置 `VITE_POKEDEX_DATA_MANIFEST_URL`。模板见 `.env.example`。
+Artifacts are written to the ignored `public/assets/databases/` directory. Host the manifest and versioned `.zip`, then set `VITE_POKEDEX_DATA_MANIFEST_URL`. See `.env.example`.
 
-## 部署
+## Deploy
 
-前端部署在 [https://pokedex.guoxudong.io/](https://pokedex.guoxudong.io/)。框架选 Vite，根目录为仓库根目录。
+The web app is at [https://pokedex.guoxudong.io/](https://pokedex.guoxudong.io/). Use the Vite preset with the repository root as the project root.
 
-可选环境变量：
+Optional environment variable:
 
-| 变量 | 用途 |
+| Variable | Purpose |
 | --- | --- |
-| `VITE_POKEDEX_DATA_MANIFEST_URL` | Android 离线资料库更新检查；纯 Web 不需要 |
+| `VITE_POKEDEX_DATA_MANIFEST_URL` | Android offline data-package update checks; not needed for web |
 
-## 字体与数据
+## Fonts and data
 
-- UI 字体 [Ark Pixel](https://github.com/TakWolf/ark-pixel-font)，SIL Open Font License 1.1，见 `public/fonts/OFL.txt`
-- 宝可梦数据与精灵图来自 [PokeAPI](https://pokeapi.co/)
+- UI font: [Ark Pixel](https://github.com/TakWolf/ark-pixel-font), SIL Open Font License 1.1, see `public/fonts/OFL.txt`
+- Pokémon data and sprites come from [PokeAPI](https://pokeapi.co/)
 
-## 贡献
+## Contributing
 
-见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+See [CONTRIBUTING.md](./CONTRIBUTING.md). Write commit messages and pull requests in English.
 
-## 许可
+## License
 
-源代码以 [MIT License](./LICENSE) 发布。宝可梦名称、形象、叫声和官方文本的权利仍归其权利人，不在 MIT 范围内。详见 [NOTICE](./NOTICE)。
+Source code is released under the [MIT License](./LICENSE). Pokémon names, likenesses, cries, and official text remain with their rights holders and are outside the MIT grant. See [NOTICE](./NOTICE).
