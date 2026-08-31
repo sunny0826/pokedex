@@ -1,0 +1,42 @@
+Pokédex ZH
+Copyright (c) 2026 Xudong Guo
+
+This repository's original source code is licensed under the MIT License.
+That license does not cover Pokémon intellectual property, third-party data,
+or third-party fonts bundled or loaded by the app.
+
+Unofficial fan project
+----------------------
+
+This is an unofficial, fan-made Pokédex. It is not affiliated with, endorsed,
+sponsored, or approved by Nintendo, GAME FREAK, or The Pokémon Company.
+
+Pokémon and Pokémon character names are trademarks of their respective owners.
+Official artwork, game text, cries, and other Pokémon assets remain the
+property of their rights holders. This project is intended for personal and
+educational use. Do not present it as an official product, and do not publish
+it to an app store without a separate legal review.
+
+Data and images
+---------------
+
+Runtime Pokémon data and sprites are requested from PokeAPI:
+
+    https://pokeapi.co/
+
+Please follow PokeAPI's documentation and usage guidance. Upstream Pokédex
+data has its own sources and terms; this project does not grant rights to
+those materials.
+
+Fonts
+-----
+
+Ark Pixel is included under the SIL Open Font License, Version 1.1.
+See `public/fonts/OFL.txt` and https://github.com/TakWolf/ark-pixel-font.
+
+非官方声明
+----------
+
+本项目是非官方同人图鉴，与 Nintendo、GAME FREAK、The Pokémon Company 无关，
+未获得官方授权。源代码以 MIT 许可，但宝可梦名称、形象、叫声、官方文本等
+知识产权仍归权利人所有，不在 MIT 范围内。

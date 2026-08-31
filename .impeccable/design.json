@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-09T08:32:39Z",
+  "title": "Design System: Pokemon Pokedex",
+  "extensions": {
+    "colorMeta": {
+      "pokedex-red": {
+        "role": "primary",
+        "displayName": "Pokedex Red",
+        "canonical": "hsl(0 75% 48%)",
+        "tonalRamp": [
+          "oklch(15% 0.12 29)",
+          "oklch(25% 0.14 29)",
+          "oklch(35% 0.16 29)",
+          "oklch(48% 0.18 29)",
+          "oklch(60% 0.16 29)",
+          "oklch(72% 0.12 29)",
+          "oklch(84% 0.08 29)",
+          "oklch(95% 0.03 29)"
+        ]
+      },
+      "screen-forest": {
+        "role": "secondary",
+        "displayName": "Screen Forest",
+        "canonical": "hsl(160 30% 20%)",
+        "tonalRamp": [
+          "oklch(15% 0.04 165)",
+          "oklch(25% 0.05 165)",
+          "oklch(35% 0.06 165)",
+          "oklch(48% 0.07 165)",
+          "oklch(60% 0.06 165)",
+          "oklch(72% 0.05 165)",
+          "oklch(84% 0.035 165)",
+          "oklch(95% 0.015 165)"
+        ]
+      },
+      "phosphor-mint": {
+        "role": "secondary",
+        "displayName": "Phosphor Mint",
+        "canonical": "hsl(160 80% 75%)",
+        "tonalRamp": [
+          "oklch(15% 0.08 165)",
+          "oklch(25% 0.1 165)",
+          "oklch(35% 0.12 165)",
+          "oklch(48% 0.14 165)",
+          "oklch(60% 0.13 165)",
+          "oklch(72% 0.11 165)",
+          "oklch(84% 0.08 165)",
+          "oklch(95% 0.03 165)"
+        ]
+      },
+      "electric-spark": {
+        "role": "tertiary",
+        "displayName": "Electric Spark",
+        "canonical": "hsl(45 95% 55%)",
+        "tonalRamp": [
+          "oklch(15% 0.08 90)",
+          "oklch(25% 0.1 90)",
+          "oklch(35% 0.12 90)",
+          "oklch(48% 0.14 90)",
+          "oklch(60% 0.13 90)",
+          "oklch(72% 0.11 90)",
+          "oklch(84% 0.08 90)",
+          "oklch(95% 0.03 90)"
+        ]
+      },
+      "lens-blue": {
+        "role": "tertiary",
+        "displayName": "Lens Blue",
+        "canonical": "hsl(200 85% 55%)",
+        "tonalRamp": [
+          "oklch(15% 0.08 235)",
+          "oklch(25% 0.1 235)",
+          "oklch(35% 0.12 235)",
+          "oklch(48% 0.14 235)",
+          "oklch(60% 0.13 235)",
+          "oklch(72% 0.11 235)",
+          "oklch(84% 0.08 235)",
+          "oklch(95% 0.03 235)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Device Display",
+        "purpose": "App heading and rare console-style emphasis only."
+      },
+      "headline": {
+        "displayName": "Pokemon Headline",
+        "purpose": "Pokemon names, major panel titles, and battle result headings."
+      },
+      "body": {
+        "displayName": "Readable Bilingual Body",
+        "purpose": "Chinese-first product content, stats, descriptions, and controls."
+      },
+      "label": {
+        "displayName": "Pixel Device Label",
+        "purpose": "IDs, counters, and small hardware-like labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "device-shell",
+        "value": "inset 3px 3px 8px hsl(var(--pokedex-frame-light) / 0.5), inset -3px -3px 8px hsl(var(--pokedex-frame-dark) / 0.6), 6px 6px 20px hsl(0 0% 0% / 0.3)",
+        "purpose": "Outer Pokedex frame only."
+      },
+      {
+        "name": "screen-well",
+        "value": "inset 4px 4px 12px hsl(0 0% 0% / 0.5), inset -2px -2px 8px hsl(var(--pokedex-screen-light) / 0.1)",
+        "purpose": "Deep display area."
+      },
+      {
+        "name": "button-press",
+        "value": "inset 2px 2px 4px hsl(0 0% 100% / 0.4), inset -2px -2px 4px hsl(0 0% 0% / 0.2), 2px 2px 4px hsl(0 0% 0% / 0.2)",
+        "purpose": "Physical controls that need tactile feedback."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "150ms ease-out",
+        "purpose": "Fast hover, selected, and pressed feedback."
+      },
+      {
+        "name": "state-standard",
+        "value": "200ms ease-out",
+        "purpose": "Default component state transitions."
+      },
+      {
+        "name": "device-open",
+        "value": "400ms ease-in-out",
+        "purpose": "Open and close Pokedex shell transitions."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Device Action Button",
+      "kind": "button",
+      "refersTo": "button-device",
+      "description": "A compact physical-control button used for random and device actions.",
+      "html": "<button class=\"ds-device-button\">RANDOM</button>",
+      "css": ".ds-device-button { height: 32px; min-width: 96px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 4px; background: #2eb85c; color: #fafafa; font-family: ChillMatrixBlack, 'Press Start 2P', cursive; font-size: 8px; box-shadow: inset 2px 2px 4px rgba(255,255,255,0.4), inset -2px -2px 4px rgba(0,0,0,0.2), 2px 2px 4px rgba(0,0,0,0.2); transition: transform 150ms ease-out, background 150ms ease-out, box-shadow 150ms ease-out; } .ds-device-button:hover { background: #29a653; } .ds-device-button:focus-visible { outline: 2px solid #8cf2d0; outline-offset: 2px; } .ds-device-button:active { transform: translateY(1px); box-shadow: inset 2px 2px 4px rgba(0,0,0,0.2), inset -2px -2px 4px rgba(255,255,255,0.1); }"
+    },
+    {
+      "name": "Screen Search Input",
+      "kind": "input",
+      "refersTo": "input-screen",
+      "description": "The screen-native search field for filtering Pokemon.",
+      "html": "<input class=\"ds-screen-input\" placeholder=\"搜索宝可梦...\" />",
+      "css": ".ds-screen-input { height: 40px; width: 220px; border-radius: 8px; border: 1px solid rgba(140,242,208,0.2); background: #305045; color: #8cf2d0; padding: 8px 12px; font-family: Inter, 'Noto Sans SC', sans-serif; font-size: 14px; transition: border-color 150ms ease-out, box-shadow 150ms ease-out; } .ds-screen-input::placeholder { color: rgba(140,242,208,0.4); } .ds-screen-input:hover { border-color: rgba(140,242,208,0.35); } .ds-screen-input:focus-visible { outline: none; border-color: rgba(140,242,208,0.55); box-shadow: 0 0 0 2px rgba(140,242,208,0.22); }"
+    },
+    {
+      "name": "Pokemon Type Badge",
+      "kind": "chip",
+      "refersTo": "chip-type",
+      "description": "A semantic Pokemon type label using the full-spectrum type palette.",
+      "html": "<span class=\"ds-type-badge\">火</span>",
+      "css": ".ds-type-badge { display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; border: 2px solid rgba(0,0,0,0.2); background: #f47b25; color: #fafafa; padding: 4px 8px; font-family: Inter, 'Noto Sans SC', sans-serif; font-size: 12px; font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.25); } .ds-type-badge:focus-visible { outline: 2px solid #8cf2d0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Pokemon Cell",
+      "kind": "card",
+      "refersTo": "pokemon-cell",
+      "description": "A compact selectable Pokemon grid cell inside the screen.",
+      "html": "<button class=\"ds-pokemon-cell\"><span class=\"ds-pokemon-id\">0025</span><span class=\"ds-pokemon-sprite\">PK</span></button>",
+      "css": ".ds-pokemon-cell { position: relative; width: 64px; height: 76px; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border-radius: 8px; border: 1px solid rgba(140,242,208,0.2); background: #305045; color: #8cf2d0; padding: 6px; transition: transform 200ms ease-out, border-color 200ms ease-out, background 200ms ease-out, box-shadow 200ms ease-out; } .ds-pokemon-cell:hover { background: rgba(140,242,208,0.1); border-color: rgba(140,242,208,0.4); } .ds-pokemon-cell:focus-visible { outline: 2px solid rgba(140,242,208,0.55); outline-offset: 2px; } .ds-pokemon-cell:active { transform: translateY(1px); } .ds-pokemon-id { font-family: ChillMatrixBlack, 'Press Start 2P', cursive; font-size: 8px; color: rgba(140,242,208,0.55); } .ds-pokemon-sprite { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(140,242,208,0.1); font-family: Inter, sans-serif; font-size: 10px; font-weight: 700; }"
+    },
+    {
+      "name": "Language Segmented Control",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "A compact two-option language control outside the Pokedex screen.",
+      "html": "<div class=\"ds-lang-toggle\" role=\"group\" aria-label=\"语言\"><button class=\"ds-lang-active\">中文</button><button class=\"ds-lang-button\">EN</button></div>",
+      "css": ".ds-lang-toggle { display: inline-flex; border-radius: 8px; border: 1px solid #b3bfcc; background: #e7ebef; padding: 2px; } .ds-lang-toggle button { width: 64px; border: 0; border-radius: 4px; padding: 4px 10px; font-family: Inter, 'Noto Sans SC', sans-serif; font-size: 12px; font-weight: 500; transition: background 150ms ease-out, color 150ms ease-out; } .ds-lang-active { background: #d61f1f; color: #fafafa; } .ds-lang-button { background: transparent; color: #52667a; } .ds-lang-button:hover { background: #d1d9e0; color: #1b2632; } .ds-lang-toggle button:focus-visible { outline: 2px solid #d61f1f; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "掌上图鉴控制台",
+    "overview": "This system should feel like a handheld Pokedex console: compact, tactile, mechanical, and game-native. The product surface is the red device shell, the deep green screens, the glowing text, the small physical controls, and the dense data panels working together as one usable object.\n\nThe visual system is allowed to feel playful, but it must stay task-focused. Mobile users are browsing, filtering, collecting, battling, and building teams; every flourish has to support those jobs. The interface should reject ordinary website composition and preserve the sense that the user is operating a device.",
+    "keyCharacteristics": [
+      "Mobile-first device composition, with the Pokedex shell as the primary surface.",
+      "Game-like mechanical controls with crisp state feedback.",
+      "Dense information presented inside dark screen panels with phosphor-colored text.",
+      "Bilingual typography that balances readable Chinese UI with pixel-label atmosphere.",
+      "Motion and shadow used for interaction feedback, not decorative spectacle."
+    ],
+    "rules": [
+      {
+        "name": "The Device First Rule",
+        "body": "Red belongs to the Pokedex hardware first, not to decorative page sections.",
+        "section": "colors"
+      },
+      {
+        "name": "The Phosphor Screen Rule",
+        "body": "Inside screen panels, use Screen Forest plus Phosphor Mint as the default relationship; do not turn the screen into ordinary light-mode UI.",
+        "section": "colors"
+      },
+      {
+        "name": "The Type Color Rule",
+        "body": "Full-spectrum colors are reserved for Pokemon type meaning and battle semantics, not random decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pixel Restraint Rule",
+        "body": "Pixel fonts are forbidden for dense body text, error details, and long Chinese copy.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Fluid UI Type Rule",
+        "body": "Product UI uses fixed rem sizes and breakpoint adjustments; do not scale text with viewport width.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mechanical Feedback Rule",
+        "body": "Buttons and inputs should feel like physical controls with crisp feedback. Use pressed states, small translate transforms, and focus rings.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Screen Flatness Rule",
+        "body": "Pokemon cells, stats, lists, and filters inside screens should not float as cards. Use borders and tonal states instead.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the Pokedex shell as the product surface, with red hardware and green screen panels carrying the experience.",
+      "Do prioritize mobile touch ergonomics: compact but reachable buttons, stable screen heights, and clear selected states.",
+      "Do use Phosphor Mint for screen text and selected state, not generic black-on-white content inside the device.",
+      "Do reserve Pokemon type colors for semantic type, battle, and team information.",
+      "Do make buttons and inputs feel like physical controls with fast, crisp feedback.",
+      "Do keep bilingual Chinese and English text readable by using Inter and Noto Sans SC for real content."
+    ],
+    "donts": [
+      "Don't make this feel like a marketing landing page, SaaS dashboard, generic content site, blog, or decorative fan page.",
+      "Don't wrap ordinary website UI in Pokemon colors and call it a Pokedex.",
+      "Don't add oversized hero sections, feature explanations, or desktop-first compositions around the device.",
+      "Don't use pixel fonts for body copy, dense stats, forms, or long Chinese text.",
+      "Don't turn screen panels into floating card grids. Use tonal layers, borders, and compact controls.",
+      "Don't use side-stripe borders, gradient text, decorative glassmorphism, hero metrics, or repeated identical icon-card grids."
+    ]
+  }
+}

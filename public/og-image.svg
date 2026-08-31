@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="宝可梦图鉴">
+  <rect width="1200" height="630" fill="#d61f1f"/>
+  <rect x="36" y="36" width="1128" height="558" rx="28" fill="#9c1616"/>
+  <rect x="72" y="72" width="1056" height="486" rx="18" fill="#244238"/>
+  <circle cx="132" cy="132" r="22" fill="#2badee"/>
+  <circle cx="132" cy="132" r="10" fill="#9fe3ff"/>
+  <text x="600" y="300" text-anchor="middle" fill="#8cf2d0" font-size="72" font-family="ui-sans-serif, system-ui, sans-serif" font-weight="700">宝可梦图鉴</text>
+  <text x="600" y="372" text-anchor="middle" fill="#8cf2d0" font-size="32" font-family="ui-sans-serif, system-ui, sans-serif">Unofficial Chinese Pokédex</text>
+  <text x="600" y="430" text-anchor="middle" fill="#8cf2d0" font-size="22" font-family="ui-sans-serif, system-ui, sans-serif" opacity="0.85">pokedex.guoxudong.io</text>
+</svg>
